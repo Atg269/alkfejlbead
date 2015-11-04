@@ -69,6 +69,17 @@
         "createdAt": "2015-10-12T12:42:24.139Z",
         "updatedAt": "2015-10-12T12:42:24.139Z",
         "id": 3
+      },
+      {
+        "surname": "w",
+        "forename": "w",
+        "neptun": "w",
+        "password": "$2a$10$OAM6vv6LqHG3PtcF8GoZc.0FbNtTZ0vKlR4HREnGniRk8TV9XsStW",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-04T11:32:11.089Z",
+        "updatedAt": "2015-11-04T11:32:11.089Z",
+        "id": 4
       }
     ]
   },
@@ -156,7 +167,7 @@
       "id": 5
     },
     "user": {
-      "id": 3
+      "id": 4
     }
   }
 }
