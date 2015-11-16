@@ -13,12 +13,18 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  background: #000000 url(bgline.jpg) repeat-x top left;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+  font-family: "Bitstream Vera Sans",Verdana,Arial,Helvetica,Sans,"Bitstream Vera Serif";
+	font-size: 1em;
+	width: 1024px;
+	height: 791px;
+	color: #feffb7;
+	background: #000000 url(bg.jpg) no-repeat scroll top left;
+	margin: 0px;
 }
 article,
 aside,

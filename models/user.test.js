@@ -4,7 +4,7 @@ var bcrypt = require('bcryptjs');
 var Waterline = require('waterline');
 var waterlineConfig = require('../config/waterline');
 var userCollection = require('./user');
-var errorCollection = require('./error');
+var errorCollection = require('./subject');
 
 var User;
 
@@ -31,7 +31,6 @@ describe('UserModel', function () {
             password: 'jelszo',
             surname: 'Gipsz',
             forename: 'Jakab',
-            avatar: '',
         };
     }
 
@@ -47,14 +46,12 @@ describe('UserModel', function () {
                 password: 'jelszo',
                 surname: 'Gipsz',
                 forename: 'Jakab',
-                avatar: '',
         })
         .then(function (user) {
             expect(user.neptun).to.equal('abcdef');
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');
-            expect(user.avatar).to.equal('');
         });
     });
 
@@ -68,7 +65,6 @@ describe('UserModel', function () {
             expect(bcrypt.compareSync('jelszo', user.password)).to.be.true;
             expect(user.surname).to.equal('Gipsz');
             expect(user.forename).to.equal('Jakab');
-            expect(user.avatar).to.equal('');
         });
     });
 

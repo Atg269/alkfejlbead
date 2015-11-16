@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-    <title>Hibabejelentő</title>
+    <title>Tárgyfelvétel</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/lib/bootswatch/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/bootswatch/darkly/bootstrap.min.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -25,7 +25,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="#">Hibabejelentő</a>
+                      <a class="navbar-brand" href="/">Home</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -52,10 +52,10 @@
                           {{else}}
                           <li><a href="/login">Bejelentkezés</a></li>
                           {{/if}}
-                          <li><a href="#">About</a></li>
                       </ul>
                       {{#if loggedIn}}
-                      <p class="navbar-text navbar-right">Üdv, {{user.forename}}!</p>
+                      <p class="navbar-brand navbar-right">Üdv, {{user.forename}}!</p>
+                      <a class="navbar-brand" href="/subjects/list">Targyfelvétel</a>
                       {{/if}}
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->

@@ -1,0 +1,67 @@
+<div class="page-header">
+    <h1>Új tárgy felvétele</h1>
+</div>
+
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group
+            {{#if validationErrors.targynev}}
+                has-error
+            {{/if}}
+        ">
+            <label for="targynev" class="col-lg-2 control-label">Tárgynév</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="targynev" name="targynev" placeholder="pl. Alkalmazások fejlesztése GY" type="text" value="{{data.subjectname}}">
+                {{#if validationErrors.targynev}}
+                    <span class="help-block">{{validationErrors.targynev.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.kredit}}
+                has-error
+            {{/if}}
+        ">
+            <label for="kredit" class="col-lg-2 control-label">Kreditérték</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="kredit" name="kredit" placeholder="pl. 5" type="number" value="{{data.credit}}">
+                {{#if validationErrors.kredit}}
+                    <span class="help-block">{{validationErrors.kredit.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.helyszin}}
+                has-error
+            {{/if}}
+        ">
+            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{data.helyszin}}">
+                {{#if validationErrors.helyszin}}
+                    <span class="help-block">{{validationErrors.helyszin.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group
+            {{#if validationErrors.leiras}}
+                has-error
+            {{/if}}
+        ">
+            <label for="leiras" class="col-lg-2 control-label">Leírás</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="leiras" name="leiras">{{data.leiras}}</textarea>
+                <span class="help-block">Rövid leírás kell.</span>
+                {{#if validationErrors.leiras}}
+                    <span class="help-block">{{validationErrors.leiras.msg}}</span>
+                {{/if}}
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Törlés</button>
+                <button type="submit" class="btn btn-primary">Beküldés</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
