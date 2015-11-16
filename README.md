@@ -22,7 +22,7 @@
 alkfejlbead/blob/master/documentation/adatbmodell.png
 2.![Felhasználóifelölet modell](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
 
-3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.png)
+3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.jpg)
 
 
 
