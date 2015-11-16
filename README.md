@@ -1,9 +1,9 @@
 # Alkalmazások Fejlesztése 1. Beadandó
-- [Követelményanalízis](https://www.github.com/Atg269/alkfejlbead#Követelményanalízis)
-- [Tervezés](https://www.github.com/Atg269/alkfejlbead#Tervezés)
-- [Implementáció](https://www.github.com/Atg269/alkfejlbead#Implementáció)
-- [Tesztelés](https://www.github.com/Atg269/alkfejlbead#Tesztelés)
-- [Felhasználói dokumentáció](https://www.github.com/Atg269/alkfejlbead#Felhasználói dokumentáció)
+- [Követelményanalízis](https://www.github.com/Atg269/alkfejlbead#követelményanalízis)
+- [Tervezés](https://www.github.com/Atg269/alkfejlbead#tervezés)
+- [Implementáció](https://www.github.com/Atg269/alkfejlbead#implementáció)
+- [Tesztelés](https://www.github.com/Atg269/alkfejlbead#tesztelés)
+- [Felhasználói dokumentáció](https://www.github.com/Atg269/alkfejlbead#felhasználói dokumentáció)
 
 ##Követelményanalízis
 
