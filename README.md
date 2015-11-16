@@ -19,10 +19,10 @@
 ##Tervezés
 1.Architektúra terv
   -végpontok: / (főoldal), /signup /login /subjects/list 
+alkfejlbead/blob/master/documentation/adatbmodell.png
+2.![Felhasználóifelölet modell](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
 
-2.![Felhasználóifelölet modell](https://github.com/Atg269/alkfejlbead/documentation/adatbmodell.png)
-
-3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/documentation/userhome.png)
+3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.png)
 
 
 
