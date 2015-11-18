@@ -22,19 +22,22 @@
 
 -
 ##Tervezés
-**Architektúra terv
+** Architektúra terv
 1. Végpontok listája:
- -GET /login - főoldal
- -GET /login/signup - bejelentkező oldal
- -GET/subject/list - pénzügyi lista
- -GET /subject/new - új tétel felvétele
- -GET /subject/update/{id} - meglévő tétel szerkesztése
- -POST /login/signup - bejelentkezési adatok küldése
- -POST /subject/new - új tétel felvétel adatainak küldése
- -POST /subject/update/{id} - meglévő tétel új adatainak küldése
- -POST /subject/delete/{id} - meglévő tétel törlése
+ - GET / - főoldal 
+ - GET /login - bejelentkező oldal
+ - GET /login/signup - regisztriációs oldal
+ - GET/subjects/list - Saját tárgyak listája oldal (ha nincs beloggolva user akkor a login végpont jelenik meg)
+ - GET /subjects/new - új tárgy felvétele
+ - GET /subjects/update/{id} - meglévő tárgy szerkesztése
+ - POST /login/signup - bejelentkezési adatok küldése
+ - POST /subjects/new - új tárgy felvétel adatainak küldése
+ - POST /subjects/update/{id} - meglévő tárgy módositott adatainak küldése
+ - POST /subjects/delete/{id} - meglévő tárgy törlése
 
-2.![Felhasználóifelölet modell](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
+2.Oldalvázlat
+ - ![Felhasználóifelölet modell vázlat](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
+ - ![Végső megvalósítás kínézete](https://github.com/Atg269/alkfejlbead/blob/master/documentation/endresult.png)
 
 3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.jpg)
 
@@ -49,10 +52,12 @@
 
 ##Tesztelés
 
+- Az oldalon egységteszt van végrehajtva a mocha segitségével
 
-
+![Teszt eredmények](https://github.com/Atg269/alkfejlbead/blob/master/documentation/indextext.png)
 
 
 ##Felhasználói dokumentáció
-Futtatáshoz ajánlott hardver, windows 7+, minimum 1 GB RAM. 
+Futtatáshoz ajánlott hardver, Windows XP+, minimum 1 GB RAM. 
 Emellet a felhasználónak szüksége van egy böngésző programr (Chrome, FireFox,IE) ahol el tudja érni a C9 weboldalt.
+A weboldal elérése: https://alkfejlbead1-atg269.c9.io/
