@@ -18,9 +18,8 @@
  - Le legyen ellenőrizve belépésnél/feliratkozásnál az összes mezőnek a nemüressége
  - Ne tartson tovább pár másodpercnél bármilyen funkciója az oldalnak (ez automatikusan teljesül)
 3. Használatieset-modell
- - Szerepkörök: Egy user-nek volt admin/user szerepköre még az első verzióban de ez ki lett véve a 2.0ás verzióbol mivel nem lett implementálva. Egy lehető jövő fejlesztési opció az az hogy az "admin" szerepkörű felhasználók legyenek csak képesek órákat felvenni egy listába, és ahelyett hogy "bármilyen" órát vehessenek fel a sima userek, csak olyanokat tudnak majd felvenni ami egy az adminok által csinált listában szerepelnek. Ez vizsont már széleskörűbb átváltoztatását igényelné az egész weboldal működésének hiszen ekkor a tárgyak sem lennének teljesen szerkeszhetőek mint most.
+ - Szerepkörök: Az oldalon van vendég és user szerepkör, a vendég az gyakorlatilag csak a fogadóoldalt tudja látni. Ahhoz hogy az oldal fő funkcióját használatba vehesse valaki regisztrálni kell user-ként. Ezenkivül egy user-nek volt admin/user szerepköre még az 1.0as verzióban de ez ki lett véve a 2.0as verzióbol mivel nem lett semmilyen konkrét módon implementálva. Egy lehető jövő fejlesztési opció az az hogy az "admin" szerepkörű felhasználók legyenek csak képesek órákat felvenni egy listába, és ahelyett hogy "bármilyen" órát vehessenek fel a sima userek, csak olyanokat tudnak majd felvenni ami egy az adminok által csinált listában szerepelnek. Ez vizsont már széleskörűbb átváltoztatását igényelné az egész weboldal működésének hiszen ekkor a tárgyak sem lennének teljesen szerkeszhetőek mint most.
 
--
 ##Tervezés
 ** Architektúra terv
 1. Végpontok listája:
@@ -35,20 +34,37 @@
  - POST /subjects/update/{id} - meglévő tárgy módositott adatainak küldése
  - POST /subjects/delete/{id} - meglévő tárgy törlése
 
-2.Oldalvázlat
- - ![Felhasználóifelölet modell vázlat](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
- - ![Végső megvalósítás kínézete](https://github.com/Atg269/alkfejlbead/blob/master/documentation/endresult.png)
+2. Adatbázis modell
+  ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
 
-3. ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.jpg)
-
+3.Oldalvázlat
+  ![Felhasználóifelölet modell vázlat](https://github.com/Atg269/alkfejlbead/blob/master/documentation/userhome.jpg)
+  ![Végső megvalósítás kínézete](https://github.com/Atg269/alkfejlbead/blob/master/documentation/endresult.png)
+ 
+ 
 
 ##Implementáció
 
 1. Fejlesztői környezet bemutatása
+A project a C9 fejlesztői környezetben (c9.io) lett megírva nagyrészt, egy Node.js projectet használva. A következő technológiák voltak még használva a projektben, különböző funkciókat teljesítettek
+A megjelenítéshez a handlebars (hbs) fájlok vannak felhasználva és a bootswatch darkly téma van kiválasztva. A használt node modulok listája, amik NPM-el vagy bower package manager-rel lettek installálva:
+ - bcryptjs
+ - body-parser
+ - chai
+ - connect-flash
+ - express
+ - express-session
+ - express-validator
+ - hbs
+ - mocha
+ - passport
+ - passport-local
+ - sails-disk
+ - sails-memory
+ - waterline
+ - zombie
+
 2. 
-
-
-
 
 ##Tesztelés
 
