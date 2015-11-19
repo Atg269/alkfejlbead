@@ -10,13 +10,15 @@
 1. Funkcionális Elvárások
  - A felhasználónak lehetősége legyen egy felhasználói fiókot csinálnia a neve és egyéb információk megadásával abban az esetben ha használni akarja a weboldalt
  - A felhasználónak lehetősége legyen beloggolni a felhasználói fiókjával hogy fel tudjon venni tárygakat
- - A felhasználónak lehetősége legyen tárygakat felvenni és törölni, továbbá szerkeszteni a felvett tárgyakat relatíve egyszerűen
+ - A felhasználónak lehetősége legyen tárygakat felvenni és törölni, továbbá szerkeszteni a felvett tárgyakat 
  - Minden felhasználónak külön tárolódjanak az adatai egy adatbázisban (a fiók adatok is meg a felvett tárgyak is)
+ - A neptunos jelszóval csinált fiók az egyedi legyen
  - Minden gomb ami a webfelületen található az működő képest legyen
 2. Nem funkcionális Elvárások
  - Ne legyen bonyolult vagy nehezen érthető új felhasználónak az oldal használata
  - Le legyen ellenőrizve belépésnél/feliratkozásnál az összes mezőnek a nemüressége
  - Ne tartson tovább pár másodpercnél bármilyen funkciója az oldalnak (ez automatikusan teljesül)
+ - Amikor egy felhasználó új fiók adatokat ad meg akkor a jelszava titkosítódjon
 3. Használatieset-modell
  - Szerepkörök: Az oldalon van vendég és user szerepkör, a vendég az gyakorlatilag csak a fogadóoldalt tudja látni. Ahhoz hogy az oldal fő funkcióját használatba vehesse valaki regisztrálni kell user-ként. Ezenkivül egy user-nek volt admin/user szerepköre még az 1.0as verzióban de ez ki lett véve a 2.0as verzióbol mivel nem lett semmilyen konkrét módon implementálva. Egy lehető jövő fejlesztési opció az az hogy az "admin" szerepkörű felhasználók legyenek csak képesek órákat felvenni egy listába, és ahelyett hogy "bármilyen" órát vehessenek fel a sima userek, csak olyanokat tudnak majd felvenni ami egy az adminok által csinált listában szerepelnek. Ez vizsont már széleskörűbb átváltoztatását igényelné az egész weboldal működésének hiszen ekkor a tárgyak sem lennének teljesen szerkeszhetőek mint most.
  - Folyamatok
@@ -25,17 +27,14 @@
 
 ##Tervezés
 1.Architektúra terv
-Végpontok listája:
- - GET / - főoldal 
- - GET /login - bejelentkező oldal
- - GET /login/signup - regisztriációs oldal
- - GET/subjects/list - Saját tárgyak listája oldal (ha nincs beloggolva user akkor a login végpont jelenik meg)
- - GET /subjects/new - új tárgy felvétele
- - GET /subjects/update/{id} - meglévő tárgy szerkesztése
- - POST /login/signup - bejelentkezési adatok küldése
- - POST /subjects/new - új tárgy felvétel adatainak küldése
- - POST /subjects/update/{id} - meglévő tárgy módositott adatainak küldése
- - POST /subjects/delete/{id} - meglévő tárgy törlése
+* Végpontok listája:
+1. GET / - főoldal
+2. GET /login - bejelentkező oldal
+3. GET /login/signup - regisztrációs oldal
+4. GET /subjects/list - saját tárgyak listájának megjelenítése
+5. GET /delete/:id -tárgynak törlése
+6. POST /new - új tárgynak a felvétele
+7. POST /edit/:id - meglévő tárgynak a szerkesztése
 
 2.Adatbázis modell
   ![Adatmodell és Adatbázisterv](https://github.com/Atg269/alkfejlbead/blob/master/documentation/adatbmodell.png)
@@ -67,8 +66,6 @@ A project a C9 fejlesztői környezetben (c9.io) lett megírva nagyrészt, egy N
  - sails-memory
  - waterline
  - zombie
-
-2. 
 
 ##Tesztelés
 
