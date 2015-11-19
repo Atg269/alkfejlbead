@@ -14,6 +14,6 @@ describe('User visits index page', function() {
     });
     
     it('should see welcome page', function() {
-        browser.assert.text('div.page-header > h1', 'Hibabejelentés az IK-n');
+        browser.assert.text('div.page-header > h1', 'Neptun 2.0 Tárgyfelvétel Solutions');
     });
 });
