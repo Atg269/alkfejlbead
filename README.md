@@ -5,13 +5,13 @@
 - [Tesztelés](https://www.github.com/Atg269/alkfejlbead#tesztelés)
 - [Felhasználói dokumentáció](https://www.github.com/Atg269/alkfejlbead#felhasználói dokumentáció)
 
-##Követelményanalízis
+###Követelményanalízis
 
 1. Funkcionális Elvárások
  - A felhasználónak lehetősége legyen egy felhasználói fiókot csinálnia a neve és egyéb információk megadásával abban az esetben ha használni akarja a weboldalt
  - A felhasználónak lehetősége legyen beloggolni a felhasználói fiókjával hogy fel tudjon venni tárygakat
  - A felhasználónak lehetősége legyen tárygakat felvenni és törölni, továbbá szerkeszteni a felvett tárgyakat 
- - Minden felhasználónak külön tárolódjanak az adatai egy adatbázisban (a fiók adatok is meg a felvett tárgyak is)
+ - Minden felhasználó csak a saját tárgyait lássa a tárgylistán 
  - A neptunos jelszóval csinált fiók az egyedi legyen
  - Minden gomb ami a webfelületen található az működő képest legyen
 2. Nem funkcionális Elvárások
@@ -25,7 +25,7 @@
   ![Teljes oldal folyamat](https://github.com/Atg269/alkfejlbead/blob/master/documentation/folyamat.png)
  - Egy felhasználó az oldalra lépve az index fogadóoldalt látja. Itt bejelentkezhet a jobb felső sarokbeli gombbal, és a bejelentkezés oldalon pedig feliratkozhat ha nincs fiókja. Sikertelen bejelentkezés vagy registráció után imént a bejelentkező oldalra vagyunk vissza utasítva. Ha sikerült belépnünk akkor lehet használni az oldal fő funckióját, a tárgyfelvételt. Ha már bejelentkeztünk a főoldalra is vissza lehet lépni (a főoldalról pedig a tárgyfelvevőre vissza) de a főoldal egyelőre csak egy welcome page, ez is egy jövő beli fejlesztési lehetőség (pl főoldalon valami extrát tudjon az csinálni aki már bejelentkezett). A bejelentkezett felhasználók kijelentkezni is tudnak ha befejezték a dolgukat az oldalon.
 
-##Tervezés
+###Tervezés
 1.Architektúra terv
 * Végpontok listája:
 1. GET / - főoldal
@@ -47,7 +47,7 @@
  
  
 
-##Implementáció
+###Implementáció
 
 1.Fejlesztői környezet bemutatása
 A project a C9 fejlesztői környezetben (c9.io) lett megírva nagyrészt, egy Node.js projectet használva. A megjelenítéshez a handlebars (hbs) fájlok vannak felhasználva és a bootswatch darkly téma van kiválasztva. A használt node modulok listája, amik NPM-el vagy bower package manager-rel lettek installálva:
@@ -67,14 +67,14 @@ A project a C9 fejlesztői környezetben (c9.io) lett megírva nagyrészt, egy N
  - waterline
  - zombie
 
-##Tesztelés
+###Tesztelés
 
 - Az oldalon egységteszt van végrehajtva a mocha segitségével
 
 ![Teszt eredmények](https://github.com/Atg269/alkfejlbead/blob/master/documentation/indextext.png)
 
 
-##Felhasználói dokumentáció
+###Felhasználói dokumentáció
 Futtatáshoz ajánlott hardver, Windows XP+, minimum 1 GB RAM. 
 Emellet a felhasználónak szüksége van egy böngésző programr (Chrome, FireFox,IE) ahol el tudja érni a C9 weboldalt.
 A weboldal elérése: https://alkfejlbead1-atg269.c9.io/
